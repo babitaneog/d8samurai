@@ -1,0 +1,32 @@
+uuid: d0e89457-31ea-4dcc-9db2-d528be6669d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.brochure.body
+    - field.field.node.brochure.field_isbn
+    - node.type.brochure
+  module:
+    - text
+    - user
+id: node.brochure.default
+targetEntityType: node
+bundle: brochure
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_isbn:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

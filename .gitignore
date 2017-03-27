@@ -1,16 +1,6 @@
 # Ignore paths that contain user-generated content.
-#files
-#sites/*/files
-#sites/*/private
-#!sites/*/files/*/sync
-#!sites/*/files/*/sync/*
-
-# Ignore everything
-*
-
-# But not these files...
-# !.gitignore
-
-
-# ...even if they are in subdirectories
-# !*/
+files
+sites/*/files
+sites/*/private
+!sites/*/files/*/sync
+!sites/*/files/*/sync/*

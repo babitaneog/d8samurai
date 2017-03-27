@@ -1,0 +1,22 @@
+uuid: 0878b473-91e8-4930-9115-09522111aec0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.brochure
+id: node.brochure.promote
+field_name: promote
+entity_type: node
+bundle: brochure
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
