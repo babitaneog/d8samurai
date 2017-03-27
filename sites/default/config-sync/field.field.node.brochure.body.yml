@@ -1,0 +1,22 @@
+uuid: 1040936e-9905-47d7-8288-53bb94684f6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.brochure
+  module:
+    - text
+id: node.brochure.body
+field_name: body
+entity_type: node
+bundle: brochure
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
