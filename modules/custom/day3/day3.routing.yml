@@ -1,0 +1,7 @@
+day3form:
+  path: '/day3/config'
+  defaults:
+    _form: '\Drupal\day3\Form\ConfigurationForm'
+    _title: 'Configuration Form'
+  requirements: 
+    _permission: 'access content'

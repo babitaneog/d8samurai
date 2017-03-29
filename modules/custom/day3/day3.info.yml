@@ -1,0 +1,5 @@
+name: Day 3 - Configuration form
+type: module
+description: 'Creates a basic configuration form'
+package: Custom
+core: 8.x
