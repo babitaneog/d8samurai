@@ -1,0 +1,25 @@
+uuid: dd2d68db-4ad7-4de5-bec7-da9bd116586d
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.migrate_example_advanced_comment
+    - field.field.comment.migrate_example_advanced_comment.comment_body
+  module:
+    - text
+_core:
+  default_config_hash: LqDo_NRXWedT3_M3btWzMvA50Lzar0lxn1Oq9fj0BdI
+id: comment.migrate_example_advanced_comment.default
+targetEntityType: comment
+bundle: migrate_example_advanced_comment
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden: {  }

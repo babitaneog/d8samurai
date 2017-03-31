@@ -1,0 +1,9 @@
+uuid: f389b3df-bd35-4d6a-8824-63e412826ed9
+langcode: en
+status: true
+dependencies: {  }
+name: Genre
+vid: genre
+description: 'Genre for Movies'
+hierarchy: 0
+weight: 0
