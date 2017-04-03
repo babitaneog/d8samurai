@@ -11,14 +11,17 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  cron_example: 0
   datetime: 0
   day3: 0
+  day5: 0
   dblog: 0
   devel: 0
   devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
+  examples: 0
   field: 0
   field_ui: 0
   file: 0
@@ -53,6 +56,7 @@ module:
   tour: 0
   update: 0
   user: 0
+  utils: 0
   views_ui: 0
   menu_link_content: 1
   views: 10

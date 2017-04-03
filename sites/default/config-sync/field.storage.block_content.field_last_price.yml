@@ -1,0 +1,20 @@
+uuid: ef0de309-8744-481c-94dd-ca303e63dd62
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_last_price
+field_name: field_last_price
+entity_type: block_content
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
