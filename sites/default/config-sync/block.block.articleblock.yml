@@ -1,0 +1,20 @@
+uuid: d5db3734-9123-4775-88bf-8e43a7af1464
+langcode: en
+status: true
+dependencies:
+  module:
+    - utils
+  theme:
+    - bartik
+id: articleblock
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: article_block
+settings:
+  id: article_block
+  label: 'Article block'
+  provider: utils
+  label_display: visible
+visibility: {  }
