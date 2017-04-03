@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Demonstrates use of the Cron API in drupal - hook_cron().
+ */
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Block\BlockBase;
+
+/**
+ * Implements hook_cron()
+ */
+function day5_cron() {
+  /**
+   * fetch the details of the stock_exchange_rate_card 
+   * custom block
+   */
+  $blocks = \Drupal::entityTypeManager()
+      ->getStorage('block_content')
+      ->loadByProperties(array('type' => 'stock_exchange_rate_card'));
+
+  //$message = t('testing watchdog logging');
+  // Logs a notice
+  //\Drupal::logger('day5')->notice('<pre>' . print_r($blocks, 1) . '</pre>');
+  // Logs an error
+  //\Drupal::logger('day5')->error($message);
+
+  foreach ($blocks as $block) {
+    //\Drupal::logger('day5')->notice('<pre>' . $block->field_symbol->value . '</pre>');
+    $value = $block->field_symbol->value;
+    $url = 'http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=' . $value . '&callback=myFunction';
+    $response = \Drupal::httpClient()->get($url, array('headers' => array('Accept' => 'text/plain')));
+    $data = (string) $response->getBody();
+
+    $decoded_data = Json::decode($data);
+
+    $last_price = $decoded_data['LastPrice'];
+    $change = $decoded_data['Change'];
+    $block->set('field_change', $change);
+    $block->set('field_last_price', $last_price);
+    $block->save();
+  }
+}

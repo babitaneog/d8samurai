@@ -1,0 +1,7 @@
+name: Utilities
+type: module
+core: 8.x
+description: Utilities for the Site
+package: custom
+dependencies:
+  - block
